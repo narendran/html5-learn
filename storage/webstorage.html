@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>
+		Web Storage - Storing Key-Value pairs on the client side.
+	</title>
+	<script type="text/javascript">
+	function load_local(){
+		keyinput = "username";
+		alert(window.localStorage.getItem(keyinput));
+	}
+
+	function store_local(){
+		keyinput = "username";
+		valinput = document.getElementById('username').value;
+		window.localStorage.setItem(keyinput,valinput);
+	}
+	</script>
+</head>
+<body>
+	<center><table width="100%" height="100%"><tr><th>HTML5 WebStorage</tr><tr><td valign="center" bgcolor="whitesmoke">
+	This page will demonstrate web storage. Web Storage is a feature in HTML5 that allows you to store and load a key value pair on client side which will be persisted across application restarts. (Adheres to Same origin Policy).<br> How does it differ from Cookies? Ya I too had the same question. Cookies are also name-value pairs) are limited in size ie. 4 KB. But HTML5 storage allows a whopping 5MB for local storage and unlimited (limited only by system memory) for session storage. Here we have a demo of local storage.<br><br>
+	Username : <input type = "text" id = "username">
+	<input type= "button" value = "Store" onClick ="javascsript:store_local()">
+	<input type= "button" value = "Load" onClick = "javascript:load_local()">
+	</td></tr><tr></tr></table></center>
+</body>
+</html>
