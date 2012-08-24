@@ -1,0 +1,14 @@
+<html>
+<head>
+	<title>Number crunching Web Worker</title>
+	<script type="text/javascript">
+	var worker = new Worker('numbercruncher.js');
+	worker.onmessage = function(e){
+		document.getElementById('result').textContent = document.getElementById('result').textContent+'  '+e.data;
+	}
+	</script>
+</head>
+<body>
+	Result from Web Worker : <output id="result"></output>
+</body>
+</html>
